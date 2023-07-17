@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let c =a+b;
+    let sum=0;
+    let number = 0;
+
+    while (number < 20) {
+        console.log("a "+a)
+        console.log("b "+b)
+        c = a + b;
+        console.log("c "+c)
+        a = b;
+
+        b = c;
+        sum+=c;
+        number++;
+    }
+    console.log("sum "+sum)
+</script>
+</body>
+</html>
