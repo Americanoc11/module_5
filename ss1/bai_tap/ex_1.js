@@ -54,19 +54,16 @@ console.log(goodRate);
 let badRate = courses.filter(function (courses) {
     return courses.rating < 4;
 });
-badRate.forEach(function (courses) {
+badRate.map(function (courses) {
     console.log(courses.id + " - " + courses.title + " - " + courses.rating);
 });
 
 // ex3
 
-// courses.map(function(courses){
-//     return courses;
-//     })
-// addedCourses.forEach(function(addedCourses){
-//     courses.push(addedCourses);
-// })
-// console.log(courses);
 
-let newArray=[...courses,...addedCourses];
-console.log(newArray);
+let addArray=(courses,addedCourses)=>{
+   
+    return  [...courses,...addedCourses];
+};
+
+console.log(addArray(courses,addedCourses));
