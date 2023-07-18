@@ -485,7 +485,6 @@ export default function Section() {
                     </tbody>
                 </table>
             </div>
-            
         </>
     )
 }
