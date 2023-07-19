@@ -1,3 +1,4 @@
+import Customer from "./Customer"
 export default function Section() {
     return (
         <>
@@ -447,6 +448,7 @@ export default function Section() {
                 </section>
             </div>
             <div className="container">
+            <h4 style={{textAlign:"center"}}>Service List</h4>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -455,7 +457,6 @@ export default function Section() {
                             <th>Area</th>
                             <th>Price</th>
                         </tr>
-
                     </thead>
                     <tbody >
                         <tr>
@@ -482,6 +483,23 @@ export default function Section() {
                             <td>100m x 100m</td>
                             <td>1000$</td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div className="container">
+                <h4 style={{textAlign:"center"}}>Customer List</h4>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <Customer/>
                     </tbody>
                 </table>
             </div>
