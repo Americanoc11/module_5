@@ -43,6 +43,9 @@ class Customer extends React.Component {
                     <td>{customer.name}</td>
                     <td>{customer.age}</td>
                     <td>{customer.address}</td>
+                    <td>
+                    <a href="#deleteEmployeeModal" className="btn btn-outline-danger text-light" data-toggle="modal"><span>Delete</span></a>
+                    </td>
                 </tr>
             ))
         )

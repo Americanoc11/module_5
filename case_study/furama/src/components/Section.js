@@ -1,4 +1,5 @@
 import Customer from "./Customer"
+import Service from "./Service"
 export default function Section() {
     return (
         <>
@@ -447,61 +448,100 @@ export default function Section() {
                     </div>
                 </section>
             </div>
-            <div className="container">
-            <h4 style={{textAlign:"center"}}>Service List</h4>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Area</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody >
-                        <tr>
-                            <td>1</td>
-                            <td>House</td>
-                            <td>200m x 200m</td>
-                            <td>1000$</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Villa</td>
-                            <td>200m x 200m</td>
-                            <td>800$</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Room</td>
-                            <td>200m x 200m</td>
-                            <td>100$</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>House</td>
-                            <td>100m x 100m</td>
-                            <td>1000$</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className="container-xl">
+                <div className="table-responsive">
+                    <div className="table-wrapper">
+                        <div className="table-title">
+                            <div className="row">
+                                <div className="col-sm-6">
+                                    <h2>Manage <b>Service</b></h2>
+                                </div>
+                                <div className="col-sm-6">
+                                    <a href="#addEmployeeModal" className="btn btn-outline-primary" data-toggle="modal"><span>Add New Employee</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <table className="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span className="custom-checkbox">
+                                            <input type="checkbox" id="selectAll" />
+                                            <label for="selectAll"></label>
+                                        </span>
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Area</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <Service />
+                            </tbody>
+                        </table>
+                        <div className="clearfix">
+                            <div className="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul className="pagination">
+                                <li className="page-item disabled"><a href="#">Previous</a></li>
+                                <li className="page-item"><a href="#" className="page-link">1</a></li>
+                                <li className="page-item"><a href="#" className="page-link">2</a></li>
+                                <li className="page-item active"><a href="#" className="page-link">3</a></li>
+                                <li className="page-item"><a href="#" className="page-link">4</a></li>
+                                <li className="page-item"><a href="#" className="page-link">5</a></li>
+                                <li className="page-item"><a href="#" className="page-link">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="container">
-                <h4 style={{textAlign:"center"}}>Customer List</h4>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Address</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      <Customer/>
-                    </tbody>
-                </table>
+            <div className="container-xl">
+                <div className="table-responsive">
+                    <div className="table-wrapper">
+                        <div className="table-title">
+                            <div className="row">
+                                <div className="col-sm-6">
+                                    <h2>Manage <b>Customer</b></h2>
+                                </div>
+                                <div className="col-sm-6">
+                                    <a href="#addEmployeeModal" className="btn btn-outline-primary" data-toggle="modal"><span>Add New Employee</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <table className="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span className="custom-checkbox">
+                                            <input type="checkbox" id="selectAll" />
+                                            <label for="selectAll"></label>
+                                        </span>
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Address</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <Customer />
+                            </tbody>
+                        </table>
+                        <div className="clearfix">
+                            <div className="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul className="pagination">
+                                <li className="page-item disabled"><a href="#">Previous</a></li>
+                                <li className="page-item"><a href="#" className="page-link">1</a></li>
+                                <li className="page-item"><a href="#" className="page-link">2</a></li>
+                                <li className="page-item active"><a href="#" className="page-link">3</a></li>
+                                <li className="page-item"><a href="#" className="page-link">4</a></li>
+                                <li className="page-item"><a href="#" className="page-link">5</a></li>
+                                <li className="page-item"><a href="#" className="page-link">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
