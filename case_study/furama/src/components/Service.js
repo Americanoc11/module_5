@@ -47,8 +47,8 @@ class Service extends React.Component {
                 <tr key={service.id}>
                     <td>{service.id}</td>
                     <td>{service.name}</td>
-                    <td>{service.age}</td>
-                    <td>{service.address}</td>
+                    <td>{service.area}</td>
+                    <td>{service.price}</td>
                     <td>
                     <a href="#deleteEmployeeModal" className="btn btn-outline-danger text-light" data-toggle="modal"><span>Delete</span></a>
                     </td>
