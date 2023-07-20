@@ -1,6 +1,6 @@
 import React from 'react';
 
-const student = [
+const students = [
     {
         id: 1,
         name: "Duc",
@@ -21,12 +21,12 @@ class Student extends React.Component {
     render() {
         return (
 
-            student&&student.map((student) => (
-                <tr>
-                    <td>{student.id}</td>
-                    <td>{student.name}</td>
-                    <td>{student.age}</td>
-                    <td>{student.address}</td>
+            students&&students.map((students) => (
+                <tr key={students.id}>
+                    <td>{students.id}</td>
+                    <td>{students.name}</td>
+                    <td>{students.age}</td>
+                    <td>{students.address}</td>
                 </tr>
             ))
         )

@@ -11,18 +11,11 @@
   }
   
   /* Căn giữa ô input */
-  input[type="text"] {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+
  
 
 /* Căn chỉnh ô input date */
-input[type="date"] {
+input[type="date"], input[type="text"],select {
   display: block;
   width: 100%;
   padding: 8px;
@@ -49,3 +42,4 @@ input[type="radio"] {
   .column-padding {
     padding: 5px;
   }
+ 

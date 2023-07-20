@@ -1,5 +1,7 @@
-import Customer from "./Customer"
-import Service from "./Service"
+import Customer from "../customer/Customer"
+import Service from "../service/Service"
+import ContractList from "../contract/ContractList"
+
 export default function Section() {
     return (
         <>
@@ -473,6 +475,8 @@ export default function Section() {
                                     <th>Name</th>
                                     <th>Area</th>
                                     <th>Price</th>
+                                    <th>Person</th>
+                                    <th>Type</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -519,13 +523,67 @@ export default function Section() {
                                         </span>
                                     </th>
                                     <th>Name</th>
-                                    <th>Age</th>
+                                    <th>Date of Birth</th>
+                                    <th>Gender</th>
+                                    <th>Identity</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
                                     <th>Address</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <Customer />
+                            </tbody>
+                        </table>
+                        <div className="clearfix">
+                            <div className="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul className="pagination">
+                                <li className="page-item disabled"><a href="#">Previous</a></li>
+                                <li className="page-item"><a href="#" className="page-link">1</a></li>
+                                <li className="page-item"><a href="#" className="page-link">2</a></li>
+                                <li className="page-item active"><a href="#" className="page-link">3</a></li>
+                                <li className="page-item"><a href="#" className="page-link">4</a></li>
+                                <li className="page-item"><a href="#" className="page-link">5</a></li>
+                                <li className="page-item"><a href="#" className="page-link">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container-xl">
+                <div className="table-responsive">
+                    <div className="table-wrapper">
+                        <div className="table-title">
+                            <div className="row">
+                                <div className="col-sm-6">
+                                    <h2>Manage <b>Customer</b></h2>
+                                </div>
+                                <div className="col-sm-6">
+                                    <a href="#addEmployeeModal" className="btn btn-outline-primary" data-toggle="modal"><span>Add New Employee</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <table className="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span className="custom-checkbox">
+                                            <input type="checkbox" id="selectAll" />
+                                            <label for="selectAll"></label>
+                                        </span>
+                                    </th>
+                                    <th>Id contract</th>
+                                    <th>Name Service</th>
+                                    <th>Name customer</th>
+                                    <th>Day Start</th>
+                                    <th>Day End</th>
+                                    <th>Deposit</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ContractList />
                             </tbody>
                         </table>
                         <div className="clearfix">
