@@ -17,17 +17,16 @@ class App extends Component {
     })
   }
   handleAddItem = () => {
-    let item = this.state.item;
-    if (item !== "") {
-      let list = this.state.list;
-      list.push(item);
-      let newItem = {
-        list,
-        item: ""
+    this.setState((previousList) => {
+      if (previousList.item !== "") {
+        return {
+          list:[...previousList.list,previousList.item],
+          item:""
+        }
+      } else{
+        return {...previousList}
       }
-      this.setState(newItem)
-      console.log(list);
-    }
+    })
   }
   render() {
     return (
