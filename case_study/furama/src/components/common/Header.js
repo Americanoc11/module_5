@@ -1,7 +1,10 @@
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 export default function Header() {
     return (
         <>
-        <div className="row" style={{height:"100px"}}>
+        <div className="row" style={{height:"150px"}}>
             <div className="col-12">
             <div className="site-mobile-menu site-navbar-target">
                 <div className="site-mobile-menu-header">
@@ -21,7 +24,7 @@ export default function Header() {
                             <ul
                                 className="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
                             >
-                                <li className="active"><a href="index.html">Home</a></li>
+                                <li className="active"><Link to={`/`}>Home</Link></li>
                                 <li className="has-children">
                                     <a href="properties.html">Properties</a>
                                     <ul className="dropdown">
@@ -30,9 +33,10 @@ export default function Header() {
                                         <li className="has-children">
                                             <a href="#">Dropdown</a>
                                             <ul className="dropdown">
-                                                <li><a href="#">Sub Menu One</a></li>
-                                                <li><a href="#">Sub Menu Two</a></li>
-                                                <li><a href="#">Sub Menu Three</a></li>
+                                                <li><NavLink to="/services/list">Service</NavLink></li>
+                                                <li><NavLink to="/contracts/list">Contract</NavLink></li>
+                                                <li><NavLink to="/customers/list">Customer</NavLink></li>
+
                                             </ul>
                                         </li>
                                     </ul>

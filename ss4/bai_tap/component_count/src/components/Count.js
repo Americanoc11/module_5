@@ -19,7 +19,7 @@ function Counter() {
                 <div>
                     <p>Count 1: {countTwo}</p>
                     <button onClick={() => {
-                        setCountTwo((previousCount) => previousCount + 1)
+                        setCountTwo((previousCount) => previousCount + 2)
                     }}>
                         Click Me
                     </button>

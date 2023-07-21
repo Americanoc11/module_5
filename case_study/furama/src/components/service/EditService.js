@@ -1,5 +1,5 @@
 import React from "react"
-export function EditService() {
+ function EditService() {
     return (
         <>
           <div id="customerCss">
@@ -94,3 +94,4 @@ export function EditService() {
         </>
     )
 }
+export default EditService

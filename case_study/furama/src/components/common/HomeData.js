@@ -1,4 +1,5 @@
-export default function Section() {
+import React from "react"
+export default function HomeData() {
     return (
         <>
             <div>
@@ -446,10 +447,6 @@ export default function Section() {
                     </div>
                 </section>
             </div>
-
-
-
-            
         </>
     )
 }

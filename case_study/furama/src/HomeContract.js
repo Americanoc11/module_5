@@ -1,9 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/common/Header';
 import Section from './components/common/Section';
 import Footer from './components/common/Footer';
-import {NewContract} from './components/contract/NewContract';
+import ContractList from './components/contract/ContractList';
 
 
 
@@ -11,15 +9,15 @@ import {NewContract} from './components/contract/NewContract';
 // import { Edit } from './components/customer/Edit';
 
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Section />
-      <Footer />
-    </>
+function HomeContract() {
+    return (
+        <>
+            <Header />
+            <ContractList />
+            <Footer />
+        </>
 
-  );
+    );
 }
 
-export default App;
+export default HomeContract;
