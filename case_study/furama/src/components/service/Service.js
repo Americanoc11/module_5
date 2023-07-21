@@ -62,7 +62,7 @@ export default function ServiceList() {
                                 <h2>Manage <b>Service</b></h2>
                             </div>
                             <div className="col-sm-6">
-                            <Link to={'/services/create'} className="btn btn-outline-light">Add New Employee</Link>
+                            <Link to={'/services/create'} className="btn btn-outline-light">Add New Service</Link>
                             </div>
                         </div>
                     </div>

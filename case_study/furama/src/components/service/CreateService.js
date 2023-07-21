@@ -1,5 +1,5 @@
 import React from "react"
-export function CreateService() {
+export default function CreateService() {
     return (
         <>
             <div id="customerCss">

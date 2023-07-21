@@ -1,5 +1,5 @@
 import React from "react"
-export function NewContract() {
+export default function NewContract() {
   return (
     <>
       <div id="contractCss">

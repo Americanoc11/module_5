@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const contracts = [
     {
         id: 1,
@@ -58,10 +59,10 @@ export default function ContractList() {
                     <div className="table-title" >
                         <div className="row">
                             <div className="col-sm-6">
-                                <h2>Manage <b>Customer</b></h2>
+                                <h2>Manage <b>Contract</b></h2>
                             </div>
                             <div className="col-sm-6">
-                                <a href="#addEmployeeModal" className="btn btn-outline-light" data-toggle="modal"><span>Add New Employee</span></a>
+                                <Link to={'/contracts/create'} className="btn btn-outline-light">Add New Contract</Link>
                             </div>
                         </div>
                     </div>

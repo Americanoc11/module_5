@@ -1,9 +1,9 @@
 import React from "react"
-export function CreateCustomer() {
+export default function CreateCustomer() {
     return (
         <>
             <div id="customerCss">
-                <section className="vh-100" style={{ background: "rgb(243, 242, 236)" }}>
+                <section className="vh-100" style={{}}>
                     <div className="container py-5 h-100">
                         <div className="row d-flex justify-content-center align-items-center h-100">
                             <div className="col col-xl-10">
@@ -16,7 +16,7 @@ export function CreateCustomer() {
                                         <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                             <div className="card-body p-4 p-lg-5 text-black">
                                                 <form >
-                                                    <h3>Registration Form</h3>
+                                                    <h3>Add New Customer </h3>
 
                                                     <div className="user">
                                                         <div className="row">
@@ -99,6 +99,10 @@ export function CreateCustomer() {
                     </div>
                 </section>
             </div>
+
+
+
+
         </>
     )
 }
