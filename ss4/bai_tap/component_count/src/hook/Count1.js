@@ -1,10 +1,6 @@
 import React, { useState } from "react"
-
-function Counter() {
-
+function Count1() {
     let [countOne, setCountOne] = useState(0);
-    let [countTwo, setCountTwo] = useState(0);
-
     return (
         <>
             <div>
@@ -16,16 +12,8 @@ function Counter() {
                         Click Me
                     </button>
                 </div>
-                <div>
-                    <p>Count 1: {countTwo}</p>
-                    <button onClick={() => {
-                        setCountTwo((previousCount) => previousCount + 2)
-                    }}>
-                        Click Me
-                    </button>
-                </div>
             </div>
         </>
     )
 }
-export default Counter
+export default Count1
