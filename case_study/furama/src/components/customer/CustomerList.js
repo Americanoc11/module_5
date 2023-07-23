@@ -34,7 +34,7 @@ const customers = [
 ];
 function CustomerList() {
     return (
-        <div className="container-xl" id="furamaList">
+        <div className="container-xl" id="furamaList" style={{height:"1000px"}}>
             <div className="table-responsive">
                 <div className="table-wrapper">
                     <div className="table-title" >

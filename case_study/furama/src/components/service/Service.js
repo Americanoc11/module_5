@@ -52,7 +52,7 @@ const services = [
 export default function ServiceList() {
 
     return (
-        <div className="container-xl">
+        <div className="container-xl" style={{height:"1000px"}}>
             <div className="table-responsive">
                 <div className="table-wrapper">
 

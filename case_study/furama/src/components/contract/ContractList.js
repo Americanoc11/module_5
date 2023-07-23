@@ -53,7 +53,7 @@ const contracts = [
 ]
 export default function ContractList() {
     return (
-        <div className="container-xl">
+        <div className="container-xl" style={{height:"1000px"}}>
             <div className="table-responsive">
                 <div className="table-wrapper">
                     <div className="table-title" >

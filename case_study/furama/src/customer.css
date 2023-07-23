@@ -42,5 +42,8 @@ input[type="radio"] {
   .column-padding {
     padding: 5px;
   }
+  .text-red{
+    color: red;
+  }
   
  
