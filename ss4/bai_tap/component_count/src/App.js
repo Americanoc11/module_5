@@ -1,14 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import Count1 from './hook/Count1';
-import Count2 from './hook/Count2';
+import Count1 from './components/Count1';
+import Count2 from './components/Count2';
+
 
 
 function App() {
   return (
     <>
-    <Count1/>
-    <Count2/>
+   <Count1/>
+   <Count2/>
+
     </>
   );
 }
