@@ -20,10 +20,7 @@ export function Library() {
         disPlay();
     }, [])
 
-    const handleConfirm = (book) => {
-        setTitle(book.title)
-        console.log(title, book);
-    }
+
 
     return (
 
