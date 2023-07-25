@@ -1,13 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from "react";
-import * as libraryService from '../controller/LibraryService'
+import * as libraryService from '../service/LibraryService'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from "react-router-dom";
-import { Form } from "formik";
 
 export function Library() {
     const [librarys, setLibrarys] = useState([])
-    const [title, setTitle] = useState("");
+    const deleteBook = async (id) => {
+        const newBook = await libraryService.getById(id)
+        await libraryService.deleteById(id, newBook)
+        const res = await libraryService.getAll()
+        setLibrarys(res);
+    }
     useEffect(() => {
         const disPlay = async () => {
             try {
@@ -19,7 +23,6 @@ export function Library() {
         }
         disPlay();
     }, [])
-
 
 
     return (
@@ -39,27 +42,26 @@ export function Library() {
                     </thead>
                     <tbody>
                         {
-                            librarys?.map((values) => (
-                                <tr key={values}>
+                            librarys && librarys?.map((values, index) => (
+                                <tr key={`st_${index}`}>
                                     <th>{values.title}</th>
                                     <td>{values.quantity}</td>
                                     <td>
                                         <button className='nav-link btn btn-secondary'>Update</button>
                                     </td>
                                     <td>
-                                        <button type="button" className="btn btn-danger" >
+                                        <button type="button" className="btn btn-danger" onClick={() => { deleteBook(values.id) }} >
                                             Delete
                                         </button>
                                     </td>
                                 </tr>
                             ))
                         }
-
                     </tbody>
+
                 </table>
-            </div>
 
-
+            </div >
         </>
 
     )

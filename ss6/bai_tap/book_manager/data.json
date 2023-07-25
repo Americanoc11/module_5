@@ -1,19 +1,9 @@
 {
   "bookList": [
     {
-      "title": "z,.msdfhdslkfjhkdsjlhfklads",
-      "quantity": 321,
-      "id": 2
-    },
-    {
-      "title": "álkdjlkajsdkljalkdjlksad",
-      "quantity": 89975616,
-      "id": 3
-    },
-    {
       "title": "123",
       "quantity": 123,
-      "id": 4
+      "id": 1
     }
   ]
 }

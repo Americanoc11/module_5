@@ -1,4 +1,4 @@
-import * as libraryService from '../controller/LibraryService'
+import * as libraryService from '../service/LibraryService'
 import React from "react";
 import { Field, Form, Formik } from "formik";
 import 'bootstrap/dist/css/bootstrap.min.css';
