@@ -8,6 +8,11 @@ import * as workService from '../controller/WorkService';
 export function Work() {
     const [listTodo, setListTodo] = useState([]);
 
+    async function handleSubmit(values) {
+        const create = await workService.createTodo(values);
+        setListTodo(await workService.fillAll());
+        window.location.reload();
+    }
     useEffect(() => {
         const fetchApi = async () => {
             const result = await workService.fillAll()
@@ -15,14 +20,7 @@ export function Work() {
         }
         fetchApi();
 
-        // axios.get('http://localhost:8080/todo')
-        //     .then((res ) => {
-        //         setListTodo(res.data)
-        //         alert('Todolist')
-        //     })
-        //     .catch((error) => {
-        //         console.log('Bị lỗi')
-        //     })
+
     }, [])
 
     return (
@@ -34,17 +32,10 @@ export function Work() {
                         title: ""
                     }
                 }
-
                 onSubmit={(values) => {
-
-                    const create = async () => {
-                        // await workService.create(values)
-                        await workService.createTodo(values)
-                        setListTodo(await workService.fillAll());
-                    }
-                    create();
-                    window.location.reload();
-                }}>
+                    handleSubmit(values);
+                }}
+            >
                 <div className="container">
                     <h1 style={{ textAlign: "center" }}>Todo List</h1>
                     <Form>
@@ -58,8 +49,8 @@ export function Work() {
             </Formik>
             <ul>
                 {
-                   listTodo && listTodo.map((todo) => (
-                        <li key={todo}>{todo.title}</li>
+                    listTodo && listTodo.map((todo, index) => (
+                        <li key={`st_${index}`}>{todo.title}</li>
                     ))
                 }
             </ul>

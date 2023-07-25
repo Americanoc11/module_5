@@ -24,9 +24,18 @@ export const getById = async (id) => {
         console.log('error')
     }
 }
-export async function deleteById(id,newBook) {
-    const result = await axios.delete(`/bookList/${id}`,newBook)
-
-    return result.data
-
-} 
+export const deleteById = async (id , book) => {
+    try {
+        await axios.delete(`/bookList/${id}`,book)
+    }catch (e) {
+        console.log(e)
+    }
+}
+export const update = async (book,id) => {
+    try {
+        await axios.put(`/bookList/${id}`, book)
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
