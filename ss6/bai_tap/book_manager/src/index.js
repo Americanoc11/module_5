@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Library } from "./components/Library";
+import { BrowserRouter, Routes } from 'react-router-dom'
+import { Route } from "react-router";
+import { CreatBook } from "./components/Create";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Library />} />
+        <Route path='/create' element={<CreatBook />} />
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 
