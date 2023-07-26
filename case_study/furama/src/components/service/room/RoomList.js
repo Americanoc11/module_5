@@ -1,33 +1,68 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-import * as customerList from '../../service/customerService'
-function CustomerList() {
-    const [customers, setCustomers] = useState([])
-    const navigate = useNavigate();
-    const display = async () => {
-        try {
-            const res = await customerList.getAllCustomer();
-            setCustomers(res)
-        } catch (error) {
-            console.log("error");
-        }
-    }
-    useEffect(() => {
-        display()
-    })
+import React from "react";
+import { Link } from "react-router-dom";
+import { EditService } from "../EditService";
+const services = [
+    {
+        id: 1,
+        name: "House",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    },
+    {
+        id: 2,
+        name: "House",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    },
+    {
+        id: 3,
+        name: "Villa",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    },
+    {
+        id: 4,
+        name: "Villa",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    }, {
+        id: 5,
+        name: "Room",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    }, {
+        id: 6,
+        name: "Room",
+        area: 23,
+        price: "1000$",
+        person: 4,
+        type: "1 month"
+    },
+]
+export default function ServiceList() {
+
     return (
-        <div className="container-xl" id="furamaList" style={{ height: "1000px" }}>
+        <div className="container-xl" style={{height:"1000px"}}>
             <div className="table-responsive">
                 <div className="table-wrapper">
+
                     <div className="table-title" >
-                        <div className="row" >
-                            <div className="col-sm-6" >
-                                <h2>Manage <b>Customer</b></h2>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2>Manage <b>Room</b></h2>
                             </div>
                             <div className="col-sm-6">
-                                <NavLink to={'/customers/create'} className="btn btn-outline-light">Add New Customer</NavLink>
-
+                            <Link to={'/services/create'} className="btn btn-outline-light">Add New Service</Link>
                             </div>
                         </div>
                     </div>
@@ -37,46 +72,40 @@ function CustomerList() {
                                 <th>
                                     <span className="custom-checkbox">
                                         <input type="checkbox" id="selectAll" />
-                                        <label htmlFor="selectAll"></label>
+                                        <label for="selectAll"></label>
                                     </span>
                                 </th>
                                 <th>Name</th>
-                                <th>Date of Birth</th>
-                                <th>Gender</th>
-                                <th>Identity</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Address</th>
+                                <th>Area</th>
+                                <th>Price</th>
+                                <th>Person</th>
+                                <th>Type</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {customers && customers.map((customers, index) => {
+                            {services && services.map((services, index) => {
                                 return (
                                     <tr key={`st_${index}`}>
                                         <td>
                                             <span className="custom-checkbox">
                                                 <input type="checkbox" id="selectAll" />
-                                                <label htmlFor="selectAll"></label>
+                                                <label for="selectAll"></label>
                                             </span>
                                         </td>
-                                        <td>{customers.id}</td>
-                                        <td>{customers.name}</td>
-                                        <td>{customers.dob}</td>
-                                        <td>{customers.gender}</td>
-                                        <td>{customers.pastCode}</td>
-                                        <td>{customers.phone}</td>
-                                        <td>{customers.email}</td>
-                                        <td>{customers.address}</td>
+                                        <td>{services.id}</td>
+                                        <td>{services.name}</td>
+                                        <td>{services.area}</td>
+                                        <td>{services.price}</td>
+                                        <td>{services.person}</td>
+                                        <td>{services.type}</td>
                                         <td>
-                                            <a href="#deleteEmployeeModal" className="btn btn-outline-danger text-light" data-toggle="modal"><span>Delete</span></a>
-                                            <NavLink to={'/customers/edit'} className="btn btn-outline-success">Edit</NavLink>
-
+                                            <a href="#deleteEmployeeModal" className="btn btn-outline-danger" data-toggle="modal"><span>Delete</span></a>
+                                            <Link to={'/services/edit'} className="btn btn-outline-success">Edit</Link>
                                         </td>
                                     </tr>
                                 )
                             })}
-
                         </tbody>
                     </table>
                     <div className="clearfix">
@@ -95,5 +124,4 @@ function CustomerList() {
             </div>
         </div>
     )
-};
-export default CustomerList
+}
