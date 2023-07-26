@@ -24,22 +24,20 @@ export function Library() {
         setIdDel(book.id)
         console.log(title, book);
     }
-    useEffect(() => {
 
-        const disPlay = async () => {
-            try {
-                const result = await libraryService.getAll()
-                setLibrarys(result)
-            } catch (error) {
-                console.log('error')
-            }
-        }
+    useEffect(() => {
         disPlay();
     }, [])
 
-
+    const disPlay = async () => {
+        try {
+            const result = await libraryService.getAll()
+            setLibrarys(result)
+        } catch (error) {
+            console.log('error')
+        }
+    }
     return (
-
         <>
             <div className='container'>
                 <h1>Library</h1>
@@ -61,7 +59,7 @@ export function Library() {
                                     <td>{values.quantity}</td>
                                     <td>
                                         <button className='btn btn-primary'><NavLink
-                                            to={'/update/' + values.id} style={{textDecoration:"none", color:"white"}}> Edit</NavLink></button>
+                                            to={'/update/' + values.id} style={{ textDecoration: "none", color: "white" }}> Edit</NavLink></button>
                                     </td>
                                     <td>
                                         <button type="button"

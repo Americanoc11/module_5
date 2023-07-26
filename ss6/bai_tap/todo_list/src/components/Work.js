@@ -1,27 +1,21 @@
-import React, { useEffect, useState } from "react";
-
-import axios from "axios";
+import React, { useState } from "react";
 import { Field, Form, Formik } from "formik";
-import { useNavigate } from "react-router-dom";
 import * as workService from '../controller/WorkService';
-
+import { useNavigate } from "react-router-dom";
 export function Work() {
     const [listTodo, setListTodo] = useState([]);
-
+    const navigate = useNavigate();
+    const fetchApi = async () => {
+        const result = await workService.fillAll()
+        setListTodo(result);
+    }
     async function handleSubmit(values) {
         const create = await workService.createTodo(values);
         setListTodo(await workService.fillAll());
+        navigate("/")
         window.location.reload();
     }
-    useEffect(() => {
-        const fetchApi = async () => {
-            const result = await workService.fillAll()
-            setListTodo(result);
-        }
-        fetchApi();
-
-
-    }, [])
+    fetchApi();
 
     return (
         <>
