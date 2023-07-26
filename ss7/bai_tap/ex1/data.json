@@ -1,26 +1,20 @@
 {
   "users": [
     {
-      "id": 3,
+      "id": 1,
       "name": "Nhan",
       "email": "duc@gmail.com",
       "website": "duc.com.vn"
     },
     {
-      "id": 4,
-      "name": "Sang",
+      "id": 2,
+      "name": "Nhan",
       "email": "duc@gmail.com",
       "website": "duc.com.vn"
     },
     {
-      "id": 5,
-      "name": "Huy",
-      "email": "duc@gmail.com",
-      "website": "duc.com.vn"
-    },
-    {
-      "id": 6,
-      "name": "Hanh",
+      "id": 3,
+      "name": "Nhan",
       "email": "duc@gmail.com",
       "website": "duc.com.vn"
     }
