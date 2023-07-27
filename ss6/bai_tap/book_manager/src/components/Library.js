@@ -11,9 +11,15 @@ export function Library() {
     const [title, setTitle] = useState("");
     const [idDelete, setIdDel] = useState(0);
     const [showModal, setShowModal] = useState(true)
+    const detailBook = async (id) => {
+        try {
+            const book = await libraryService.getById(id)
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
     const deleteBook = async (id) => {
-        const newBook = await libraryService.getById(id)
-        await libraryService.deleteById(id, newBook)
+        await libraryService.deleteById(id, detailBook(id))
         const res = await libraryService.getAll()
         setLibrarys(res);
         setShowModal(false)
