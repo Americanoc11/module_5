@@ -1,7 +1,15 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import axios from "axios";
+import { getStaticProps } from '../service/Service'
 const inter = Inter({ subsets: ['latin'] })
+export async function getProps(props) {
+  const data = await getStaticProps();
+  return {
+    props: {
+      data: data,
+    },
+  };
+}
 export default function Home(props) {
   return (
     <>
@@ -31,13 +39,4 @@ export default function Home(props) {
       </table>
     </>
   );
-}
-export const getStaticProps = async () => {
-  const response = await axios.get('https://localhost:8080/hopitals')
-  const datas = response.data
-  return {
-    props: {
-      users: datas
-    }
-  }
 }

@@ -40,5 +40,107 @@
       "email": "duc@gmail.com",
       "address": "11 NVL"
     }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "name": "House-001",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "float": "4"
+    },
+    {
+      "id": 2,
+      "name": "House-002",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "float": "4"
+    },
+    {
+      "id": 3,
+      "name": "House-003",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "float": "4"
+    }
+  ],
+  "villas": [
+    {
+      "id": 1,
+      "name": "Villa-001",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "poolArea": "25x25",
+      "float": "4"
+    },
+    {
+      "id": 2,
+      "name": "Villa-002",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "poolArea": "25x25",
+      "float": "4"
+    },
+    {
+      "id": 3,
+      "name": "Villa-003",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "typeRoom": "Vip",
+      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
+      "poolArea": "25x25",
+      "float": "4"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Room-001",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Room-002",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Room-003",
+      "area": "300x300",
+      "price": "1000$",
+      "person": "3",
+      "typeRental": "months",
+      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+    }
   ]
 }

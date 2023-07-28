@@ -3,7 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import * as customerList from '../../service/customerService'
 function CustomerList() {
-    const [customers, setCustomers] = useState([])
+    const [customers, setCustomers] = useState([]);
+    const [customer, setCustomer] = useState("");
     const navigate = useNavigate();
     const display = async () => {
         try {
@@ -15,7 +16,7 @@ function CustomerList() {
     }
     useEffect(() => {
         display()
-    })
+    }, [customer])
     return (
         <div className="container-xl" id="furamaList" style={{ height: "1000px" }}>
             <div className="table-responsive">
@@ -34,12 +35,7 @@ function CustomerList() {
                     <table className="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>
-                                    <span className="custom-checkbox">
-                                        <input type="checkbox" id="selectAll" />
-                                        <label htmlFor="selectAll"></label>
-                                    </span>
-                                </th>
+                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Date of Birth</th>
                                 <th>Gender</th>
@@ -54,12 +50,6 @@ function CustomerList() {
                             {customers && customers.map((customers, index) => {
                                 return (
                                     <tr key={`st_${index}`}>
-                                        <td>
-                                            <span className="custom-checkbox">
-                                                <input type="checkbox" id="selectAll" />
-                                                <label htmlFor="selectAll"></label>
-                                            </span>
-                                        </td>
                                         <td>{customers.id}</td>
                                         <td>{customers.name}</td>
                                         <td>{customers.dob}</td>

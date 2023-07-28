@@ -14,8 +14,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 body {
-  background-image: url("D:\codegym\module_5\case_study\furama\public\images\wallpaperflare.com_wallpaper.jpg")
-  /* background-color: #D7EFF3; */
+  /* background-image: url("D:\codegym\module_5\case_study\furama\public\images\wallpaperflare.com_wallpaper.jpg") */
+  background-color: #99B8BA;
 }
 
 :root {

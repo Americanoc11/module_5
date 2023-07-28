@@ -1,58 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { EditService } from "../EditService";
-const services = [
-    {
-        id: 1,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 2,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 3,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 4,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 5,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 6,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-]
-export default function ServiceList() {
+import * as villaService from '../../../service/villaService'
 
+
+export default function ServiceList() {
+    const [villas, setVillas] = useState([]);
+    const [villa, setVilla] = useState("");
+    const display = async () => {
+        try {
+            const res = await villaService.getAllVilla();
+            setVillas(res);
+        } catch (error) { console.log(error.message); }
+    }
+    useEffect(() => {
+        display()
+    }, [villa])
     return (
-        <div className="container-xl" style={{height:"1000px"}}>
+        <div className="container-xl" style={{ height: "1000px" }}>
             <div className="table-responsive">
                 <div className="table-wrapper">
 
@@ -62,7 +26,7 @@ export default function ServiceList() {
                                 <h2>Manage <b>Villa</b></h2>
                             </div>
                             <div className="col-sm-6">
-                            <Link to={'/services/create'} className="btn btn-outline-light">Add New Service</Link>
+                                <Link to={'/services/villas/create'} className="btn btn-outline-light">Add New Service</Link>
                             </div>
                         </div>
                     </div>
@@ -79,12 +43,14 @@ export default function ServiceList() {
                                 <th>Area</th>
                                 <th>Price</th>
                                 <th>Person</th>
-                                <th>Type</th>
+                                <th>Type Rental</th>
+                                <th>Type Room</th>
+                                <th>Pool Area</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {services && services.map((services, index) => {
+                            {villas && villas.map((villa, index) => {
                                 return (
                                     <tr key={`st_${index}`}>
                                         <td>
@@ -93,14 +59,16 @@ export default function ServiceList() {
                                                 <label for="selectAll"></label>
                                             </span>
                                         </td>
-                                        <td>{services.id}</td>
-                                        <td>{services.name}</td>
-                                        <td>{services.area}</td>
-                                        <td>{services.price}</td>
-                                        <td>{services.person}</td>
-                                        <td>{services.type}</td>
+                                        <td>{villa.name}</td>
+                                        <td>{villa.area}</td>
+                                        <td>{villa.price}</td>
+                                        <td>{villa.person}</td>
+                                        <td>{villa.typeRental}</td>
+                                        <td>{villa.typeRoom}</td>
+                                        <td>{villa.poolArea}</td>
+
                                         <td>
-                                            <a href="#deleteEmployeeModal" className="btn btn-outline-danger" data-toggle="modal"><span>Delete</span></a>
+                                            <Link to={'/services/edit'} className="btn btn-outline-danger">Delete</Link>
                                             <Link to={'/services/edit'} className="btn btn-outline-success">Edit</Link>
                                         </td>
                                     </tr>

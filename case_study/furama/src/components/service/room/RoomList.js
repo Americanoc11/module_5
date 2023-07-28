@@ -1,58 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { EditService } from "../EditService";
-const services = [
-    {
-        id: 1,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 2,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 3,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 4,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 5,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 6,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-]
+import * as roomService from '../../../service/roomService'
 export default function ServiceList() {
-
+    const [rooms, setRooms] = useState([]);
+    const [room, setRoom] = useState("");
+    const display = async () => {
+        try {
+            const res = await roomService.getAllRoom();
+            setRooms(res);
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+    useEffect(() => {
+        display()
+    }, [room])
     return (
-        <div className="container-xl" style={{height:"1000px"}}>
+        <div className="container-xl" style={{ height: "1000px" }}>
             <div className="table-responsive">
                 <div className="table-wrapper">
 
@@ -62,7 +27,7 @@ export default function ServiceList() {
                                 <h2>Manage <b>Room</b></h2>
                             </div>
                             <div className="col-sm-6">
-                            <Link to={'/services/create'} className="btn btn-outline-light">Add New Service</Link>
+                                <Link to={'/services/rooms/create'} className="btn btn-outline-light">Add New Service</Link>
                             </div>
                         </div>
                     </div>
@@ -79,12 +44,13 @@ export default function ServiceList() {
                                 <th>Area</th>
                                 <th>Price</th>
                                 <th>Person</th>
-                                <th>Type</th>
+                                <th>Type Rental</th>
+                                <th>Service</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {services && services.map((services, index) => {
+                            {rooms && rooms.map((room, index) => {
                                 return (
                                     <tr key={`st_${index}`}>
                                         <td>
@@ -93,14 +59,14 @@ export default function ServiceList() {
                                                 <label for="selectAll"></label>
                                             </span>
                                         </td>
-                                        <td>{services.id}</td>
-                                        <td>{services.name}</td>
-                                        <td>{services.area}</td>
-                                        <td>{services.price}</td>
-                                        <td>{services.person}</td>
-                                        <td>{services.type}</td>
+                                        <td>{room.name}</td>
+                                        <td>{room.area}</td>
+                                        <td>{room.price}</td>
+                                        <td>{room.person}</td>
+                                        <td>{room.typeRental}</td>
+                                        <td>{room.accompanyService}</td>
                                         <td>
-                                            <a href="#deleteEmployeeModal" className="btn btn-outline-danger" data-toggle="modal"><span>Delete</span></a>
+                                            <Link to={'/services/edit'} className="btn btn-outline-success">Delete</Link>
                                             <Link to={'/services/edit'} className="btn btn-outline-success">Edit</Link>
                                         </td>
                                     </tr>
