@@ -1,56 +1,15 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { EditService } from "./EditService";
-const services = [
-    {
-        id: 1,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 2,
-        name: "House",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 3,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-    {
-        id: 4,
-        name: "Villa",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 5,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    }, {
-        id: 6,
-        name: "Room",
-        area: 23,
-        price: "1000$",
-        person: 4,
-        type: "1 month"
-    },
-]
-export default function ServiceList() {
-
+import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import * as facilityService from "../../service/FacilityService"
+export default function FacilityList() {
+    const [facilitys, setFacilitys] = useState([]);
+    const getFacility = async () => {
+        const res = await facilityService.getFacility();
+        setFacilitys(res)
+    }
+    useEffect(() => {
+        getFacility()
+    },[])
     return (
         <div className="container-xl" style={{ height: "1000px" }}>
             <div className="table-responsive">
@@ -77,16 +36,15 @@ export default function ServiceList() {
                                         <label for="selectAll"></label>
                                     </span>
                                 </th>
-                                <th>Name</th>
+                                <th>Service</th>
                                 <th>Area</th>
                                 <th>Price</th>
-                                <th>Person</th>
-                                <th>Type</th>
+                                <th>Persons</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {services && services.map((services, index) => {
+                            {facilitys && facilitys.map((facility, index) => {
                                 return (
                                     <tr key={`st_${index}`}>
                                         <td>
@@ -95,15 +53,13 @@ export default function ServiceList() {
                                                 <label for="selectAll"></label>
                                             </span>
                                         </td>
-                                        <td>{services.id}</td>
-                                        <td>{services.name}</td>
-                                        <td>{services.area}</td>
-                                        <td>{services.price}</td>
-                                        <td>{services.person}</td>
-                                        <td>{services.type}</td>
+                                        <td>{facility.name}</td>
+                                        <td>{facility.useArea}</td>
+                                        <td>{facility.price}</td>
+                                        <td>{facility.persons}</td>
                                         <td>
-                                            <a href="#deleteEmployeeModal" className="btn btn-outline-danger" data-toggle="modal"><span>Delete</span></a>
                                             <NavLink to={'/services/edit'} className="btn btn-outline-success">Edit</NavLink>
+                                            <NavLink to={'/services/edit'} className="btn btn-outline-success">Delete</NavLink>
                                         </td>
                                     </tr>
                                 )

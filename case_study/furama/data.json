@@ -1,146 +1,314 @@
 {
-  "customers": [
+  "facility": [
+    {
+      "id": 3,
+      "typeId": 3,
+      "name": "OCEAN DELUXE",
+      "useArea": 84.8,
+      "price": 50000,
+      "persons": 10,
+      "typeRental": 3,
+      "roomStandardId": 3,
+      "otherUtilities": "",
+      "areaOfPool": 0,
+      "quantityOfFloor": 0,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg"
+    },
+    {
+      "typeId": 1,
+      "name": "Villa Huong Doi",
+      "useArea": 45,
+      "price": 1000,
+      "persons": 23,
+      "typeRental": 1,
+      "roomStandardId": 1,
+      "otherUtilities": "Đầy đủ tiện nghi",
+      "quantityOfFloor": 2,
+      "areaOfPool": 45,
+      "freeServiceIncluded": "ĂN sáng, Buffer trưa, Ăn tối (ngày đầu)",
+      "image": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas-_Exterior-1-F-370x239.jpg",
+      "id": 4
+    },
+    {
+      "typeId": 1,
+      "name": "Villa moi",
+      "useArea": 45,
+      "price": 4500,
+      "persons": 10,
+      "typeRental": 3,
+      "roomStandardId": 3,
+      "otherUtilities": "12332",
+      "quantityOfFloor": 3,
+      "areaOfPool": 56,
+      "freeServiceIncluded": "1231",
+      "image": "https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/723978/723978/FV_Balcony_Three_Bedroom_Villa.jpg?auto=format,compress&fit=crop&crop=entropy&w=1536&q=75",
+      "id": 5
+    }
+  ],
+  "type": [
     {
       "id": 1,
-      "name": "Duc",
-      "dob": 23,
-      "gender": "Male",
-      "pastCode": "011XXXXX333",
-      "phone": "0123456789",
-      "email": "duc@gmail.com",
-      "address": "11 NVL"
+      "name": "Villa",
+      "code": "VI"
     },
     {
       "id": 2,
-      "name": "Duc",
-      "dob": 23,
-      "gender": "Male",
-      "pastCode": "011XXXXX333",
-      "phone": "0123456789",
-      "email": "duc@gmail.com",
-      "address": "11 NVL"
+      "name": "House",
+      "code": "HO"
     },
     {
       "id": 3,
-      "name": "Duc",
-      "dob": 23,
-      "gender": "Male",
-      "pastCode": "011XXXXX333",
-      "phone": "0123456789",
-      "email": "duc@gmail.com",
-      "address": "11 NVL"
+      "name": "Room",
+      "code": "RO"
+    }
+  ],
+  "typeRental": [
+    {
+      "id": 1,
+      "name": "Year"
+    },
+    {
+      "id": 2,
+      "name": "Month"
+    },
+    {
+      "id": 3,
+      "name": "Day"
     },
     {
       "id": 4,
-      "name": "Duc",
-      "dob": 23,
-      "gender": "Male",
-      "pastCode": "011XXXXX333",
+      "name": "Hour"
+    }
+  ],
+  "roomStandard": [
+    {
+      "id": 1,
+      "name": "Normal"
+    },
+    {
+      "id": 2,
+      "name": "Business"
+    },
+    {
+      "id": 3,
+      "name": "Presidential"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Huỳnh Đức Định",
+      "customerType": 3,
+      "birthday": "2023-06-15",
+      "gender": 1,
+      "cmnd": 207379736,
+      "phone": "0555779990",
+      "email": "heeyeon@gmail.com",
+      "address": "Quảng Nam"
+    },
+    {
+      "id": 4,
+      "name": "Phan Thị Thuỷ Tiên",
+      "birthday": "2023-06-15",
+      "gender": 1,
+      "cmnd": "111111111",
+      "phone": "1111111111",
+      "email": "thuytien@gmail.com",
+      "customerType": 1,
+      "address": "Đà nẵng"
+    },
+    {
+      "name": "Dinh Dinh",
+      "birthday": "2023-06-29",
+      "gender": 2,
+      "cmnd": "123456987",
       "phone": "0123456789",
-      "email": "duc@gmail.com",
-      "address": "11 NVL"
+      "email": "nhan@gmail.com",
+      "address": "Huế",
+      "customerType": 1,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Nhan Nhan nhăn nhó",
+      "birthday": "2023-04-27",
+      "gender": 2,
+      "cmnd": "123456987",
+      "phone": "0123456987",
+      "email": "nhan@gmail.com",
+      "customerType": 2,
+      "address": "Huế"
+    },
+    {
+      "name": "Trung Dang",
+      "birthday": "2007-07-05",
+      "gender": 2,
+      "cmnd": "123456789",
+      "phone": "0116549871",
+      "email": "nhan@gmail.com",
+      "customerType": 2,
+      "address": "Huế",
+      "id": 8
+    },
+    {
+      "name": "Thanh Nhan",
+      "birthday": "2000-02-12",
+      "gender": 2,
+      "cmnd": "123456789",
+      "phone": "0123456789",
+      "email": "nhan123@gmail.com",
+      "customerType": 3,
+      "address": "Huế",
+      "id": 9
     }
   ],
-  "houses": [
+  "customerType": [
     {
       "id": 1,
-      "name": "House-001",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "float": "4"
+      "name": "Diamond"
     },
     {
       "id": 2,
-      "name": "House-002",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "float": "4"
+      "name": "Platinium"
     },
     {
       "id": 3,
-      "name": "House-003",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "float": "4"
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
     }
   ],
-  "villas": [
+  "gender": [
     {
       "id": 1,
-      "name": "Villa-001",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "poolArea": "25x25",
-      "float": "4"
+      "gender": "Girl"
     },
     {
       "id": 2,
-      "name": "Villa-002",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "poolArea": "25x25",
-      "float": "4"
+      "gender": "Boy"
     },
     {
       "id": 3,
-      "name": "Villa-003",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "typeRoom": "Vip",
-      "describe": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com",
-      "poolArea": "25x25",
-      "float": "4"
+      "gender": "Other"
     }
   ],
-  "rooms": [
+  "contract": [
     {
       "id": 1,
-      "name": "Room-001",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+      "contractCode": "HO-12356",
+      "customerId": 7,
+      "facilityId": 1,
+      "startDay": "21-01-2023",
+      "endDay": "21-02-2023",
+      "deposit": 1500,
+      "totalPrice": 5000
     },
     {
-      "id": 2,
-      "name": "Room-002",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "HO-12345",
+      "startDay": "2023-06-17",
+      "endDay": "2023-06-28",
+      "deposit": 800,
+      "totalPrice": "1500",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Room-003",
-      "area": "300x300",
-      "price": "1000$",
-      "person": "3",
-      "typeRental": "months",
-      "accompanyService": " duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com duc@gmail.com"
+      "customerId": 7,
+      "facilityId": 2,
+      "contractCode": "HO-12344",
+      "startDay": "2023-06-18",
+      "endDay": "2023-07-07",
+      "deposit": 1230,
+      "totalPrice": "4500",
+      "id": 3
+    },
+    {
+      "customerId": 4,
+      "facilityId": 3,
+      "contractCode": "HO-12345",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 1234,
+      "totalPrice": "4561",
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "facilityId": 2,
+      "contractCode": "02195",
+      "startDay": "2023-06-24",
+      "endDay": "2023-07-01",
+      "deposit": 1234,
+      "totalPrice": "12344",
+      "id": 5
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "VI-02955",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-08",
+      "deposit": 12345,
+      "totalPrice": "123456",
+      "id": 6
+    },
+    {
+      "customerId": 4,
+      "facilityId": 2,
+      "contractCode": "HO-02172",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-08",
+      "deposit": 12345,
+      "totalPrice": "45612",
+      "id": 7
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "VI-07667",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 123456,
+      "totalPrice": "123456",
+      "id": 8
+    },
+    {
+      "customerId": 1,
+      "facilityId": 1,
+      "contractCode": "RO-0262",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 1324,
+      "totalPrice": "12354",
+      "id": 9
+    },
+    {
+      "customerId": 1,
+      "facilityId": 4,
+      "contractCode": "HO-05521",
+      "startDay": "2023-07-01",
+      "endDay": "2023-07-02",
+      "deposit": 123455,
+      "totalPrice": "645321",
+      "id": 10
+    },
+    {
+      "customerId": 4,
+      "facilityId": 11,
+      "contractCode": "HO-01639",
+      "startDay": "2023-06-30",
+      "endDay": "2023-07-01",
+      "deposit": 123455,
+      "totalPrice": "123456",
+      "id": 11
     }
   ]
 }

@@ -16,7 +16,7 @@ import CustomerList from './components/customer/CustomerList';
 import CreateCustomer from './components/customer/CreateCustomer';
 import EditCustomer from './components/customer/EditCustomer';
 
-import ServiceList from './components/service/Service';
+import FacilityList from './components/service/Facility';
 import EditService from './components/service/EditService';
 import CreateService from './components/service/CreateService';
 
@@ -44,7 +44,7 @@ root.render(
         <Route path='/customers/create' element={<CreateCustomer />} />
         <Route path='/customers/edit' element={<EditCustomer />} />
 
-        <Route path='/services/list' element={<ServiceList />} />
+        <Route path='/services/facility' element={<FacilityList />} />
         <Route path='/services/create' element={<CreateService />} />
         <Route path='/services/edit' element={<EditService />} />
         <Route path='/services/houses' element={<HouseList />} />

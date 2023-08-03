@@ -11,12 +11,6 @@ export default function CreateService() {
         typeService: "",
 
     })
-    const typeServices = [
-        { label: "Hour", value: "Hour" },
-        { label: "Day", value: "Day" },
-        { label: "Month", value: "Month" },
-        { label: "Year", value: "Year" }
-    ]
     const REGEX = yup.object().shape({
         nameService: yup.string().required("Identity Contract is a required field"),
         area: yup.string().required(),

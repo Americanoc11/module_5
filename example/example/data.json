@@ -1,0 +1,139 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hoàng Huỳnh Đức",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "hobbies": "Âm nhạc",
+      "phone": "0123456789",
+      "email": "duc@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "name": "Hoàng Huỳnh Tú",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "phone": "0123456789",
+      "email": "tu@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "name": "Hoàng Huỳnh Thành",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "phone": "0123456789",
+      "email": "thanh@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "name": "Hoàng Huỳnh Thành",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "phone": "0123456789",
+      "email": "thanh@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Huỳnh Thành",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "phone": "0123456789",
+      "email": "thanh@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "id": 6,
+      "name": "Hoàng Huỳnh Thành",
+      "gender": "Nam",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "phone": "0123456789",
+      "email": "thanh@gmail.com",
+      "address": "11 Nguyễn Văn Linh,Hải Châu, Đà Nẵng"
+    },
+    {
+      "name": "123",
+      "phone": "0347335005",
+      "email": "test@example.com",
+      "address": "123",
+      "gender": "Nam",
+      "position": {
+        "id": 1,
+        "name": "Java Development"
+      },
+      "id": 7
+    },
+    {
+      "name": "Hello",
+      "phone": "123",
+      "email": "duc1231@gmail.com",
+      "address": "123 Lê Độ",
+      "gender": "Khác",
+      "position": {
+        "id": 3,
+        "name": "Python Development"
+      },
+      "id": 8
+    },
+    {
+      "name": "Samsung",
+      "phone": "0347335005",
+      "email": "hhd0511469699@gmail.com",
+      "address": "123123",
+      "gender": "Nam",
+      "position": {
+        "id": 1,
+        "name": "Java Development"
+      },
+      "id": 9
+    },
+    {
+      "name": "danh",
+      "phone": "0347335005",
+      "email": "test@example.com",
+      "address": "123 Lê Độ",
+      "gender": "Nam",
+      "position": {
+        "id": 2,
+        "name": "PHP Development"
+      },
+      "id": 10
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Java Development"
+    },
+    {
+      "id": 2,
+      "name": "PHP Development"
+    },
+    {
+      "id": 3,
+      "name": "Python Development"
+    }
+  ]
+}

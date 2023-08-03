@@ -43,7 +43,7 @@ export default function ServiceList() {
                                 <th>Name</th>
                                 <th>Area</th>
                                 <th>Price</th>
-                                <th>Person</th>
+                                <th>Persons</th>
                                 <th>Type Rental</th>
                                 <th>Service</th>
                                 <th>Actions</th>
@@ -62,7 +62,7 @@ export default function ServiceList() {
                                         <td>{room.name}</td>
                                         <td>{room.area}</td>
                                         <td>{room.price}</td>
-                                        <td>{room.person}</td>
+                                        <td>{room.persons}</td>
                                         <td>{room.typeRental}</td>
                                         <td>{room.accompanyService}</td>
                                         <td>
