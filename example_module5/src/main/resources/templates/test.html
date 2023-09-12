@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger
+    const fetchData = () => {
+        return new Promise((resolve, reject) => {
+            // Thực hiện các                                                                                                                                                                                                                                                                     tác vụ bất đồng bộ ở đây, ví dụ:
+            // Gửi yêu cầu mạng, đọc dữ liệu từ tệp, truy vấn cơ sở dữ liệu
+
+            // Giả định rằng dữ liệu đã được lấy thành công
+            const data = "Dữ liệu lấy từ tác vụ bất đồng bộ";
+            const data1 = "Dữ liệu lấy từ tác vụ bất đồng bộ";
+
+            resolve(data)
+            reject(data1); // Đánh dấu Promise là thành công và trả về dữ liệu
+        });
+    };
+
+    // Sử dụng Promise
+    fetchData()
+        .then((data) => {
+            console.log("Dữ liệu thành công:", data);
+        })
+        .catch((error) => {
+            console.error("Đã xảy ra lỗi:", error);
+        });
+
+
+
+
+
+
+</script>
+</body>
+</html>

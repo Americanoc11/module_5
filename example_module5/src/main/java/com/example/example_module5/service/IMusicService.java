@@ -1,7 +1,10 @@
 package com.example.example_module5.service;
 
 import com.example.example_module5.model.Music;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
+import java.util.Collection;
 import java.util.List;
 
 public interface IMusicService {
@@ -12,4 +15,5 @@ public interface IMusicService {
     void update(Music music);
     boolean exitsById(Integer id);
 
+    Page<Music> getListPagination(Pageable pageable);
 }

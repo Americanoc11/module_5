@@ -12,9 +12,9 @@ public class Music {
     private String author;
     private String singer;
     private Integer likes;
-    private  String time;
+    private String time;
     @ManyToOne
-    @JoinColumn(name = "status_id",nullable = false)
+    @JoinColumn(name = "status_id", nullable = false)
     private Status status;
 
     public Music() {

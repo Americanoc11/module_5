@@ -3,6 +3,8 @@ package com.example.example_module5.service;
 import com.example.example_module5.model.Music;
 import com.example.example_module5.repository.IMusicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -45,4 +47,11 @@ musicRepository.save(music);
     public boolean exitsById(Integer id) {
         return musicRepository.existsById(id);
     }
+
+    @Override
+    public Page<Music> getListPagination(Pageable pageable) {
+        return musicRepository.getAllSongPagination(pageable);
+    }
+
+
 }
